@@ -1,5 +1,3 @@
-import 'package:hashcodes/hashcodes.dart';
-
 class Size {
   int width;
   int height;
@@ -13,7 +11,7 @@ class Size {
     return "Size( $width, $height )";
   }
 
-  bool operator ==(obj) {
+  bool operator ==(Object? obj) {
     if (identical(obj, this)) {
       return true;
     }
@@ -29,5 +27,5 @@ class Size {
   }
 
   @override
-  int get hashCode => hashValues(width, height);
+  int get hashCode => width.hashCode ^ height.hashCode;
 }

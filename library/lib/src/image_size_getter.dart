@@ -10,7 +10,7 @@ export 'core/input.dart';
 
 class ImageSizeGetter {
   static bool isJpg(ImageInput input) {
-    if (input == null || !input.exists()) {
+    if (!input.exists()) {
       return false;
     }
 

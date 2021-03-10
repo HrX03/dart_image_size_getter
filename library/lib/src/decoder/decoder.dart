@@ -13,6 +13,6 @@ abstract class ImageDecoder {
       sb.write(i.toRadixString(16).padLeft(2, '0'));
     }
     final numString = sb.toString();
-    return int.tryParse(numString, radix: 16);
+    return int.parse(numString, radix: 16);
   }
 }
